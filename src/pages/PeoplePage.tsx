@@ -22,7 +22,6 @@ export const PeoplePage = () => {
 
   useEffect(() => {
     setLoading(true);
-    setError(false);
 
     fetch('https://mate-academy.github.io/react_people-table/api/people.json')
       .then(res => res.json())
