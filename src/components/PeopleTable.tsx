@@ -31,7 +31,7 @@ export const PeopleTable = ({ people, selectedSlug }) => {
             </td>
             <td>{person.sex}</td>
             <td>{person.born}</td>
-            <td>{person.died || '-'}</td>
+            <td>{person.died ?? '-'}</td>
             <td>
               {person.motherName ? (
                 <PersonLink name={person.motherName} people={people} />

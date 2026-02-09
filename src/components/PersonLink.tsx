@@ -15,7 +15,7 @@ export const PersonLink = ({ person, name, people }) => {
   const found = people?.find(p => p.name === name);
 
   if (!found) {
-    return name;
+    return name ?? '';
   }
 
   return (

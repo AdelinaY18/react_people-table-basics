@@ -18,15 +18,17 @@ export const PeoplePage = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
 
-  const { slug } = useParams();
+  const { slug } = useParams<{ slug?: string }>();
 
   useEffect(() => {
+    setError(false);
     setLoading(true);
 
     fetch('https://mate-academy.github.io/react_people-table/api/people.json')
       .then(res => res.json())
       .then(data => {
         setPeople(data);
+        setError(false);
         setLoading(false);
       })
       .catch(() => {
