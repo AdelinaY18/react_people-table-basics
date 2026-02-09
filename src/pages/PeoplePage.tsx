@@ -2,16 +2,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Loader } from '../components/Loader';
 import { PeopleTable } from '../components/PeopleTable';
-
-export interface Person {
-  slug: string;
-  name: string;
-  sex: string;
-  born: number;
-  died: number | null;
-  fatherName: string | null;
-  motherName: string | null;
-}
+import type { Person } from '../types/Person';
 
 export const PeoplePage = () => {
   const [people, setPeople] = useState<Person[]>([]);

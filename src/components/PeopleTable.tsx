@@ -1,6 +1,12 @@
 import { PersonLink } from './PersonLink';
+import type { Person } from '../types/Person';
 
-export const PeopleTable = ({ people, selectedSlug }) => {
+type Props = {
+  people: Person[];
+  selectedSlug?: string;
+};
+
+export const PeopleTable = ({ people, selectedSlug }: Props) => {
   return (
     <table
       data-cy="peopleTable"

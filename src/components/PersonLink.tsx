@@ -1,6 +1,13 @@
 import { Link } from 'react-router-dom';
+import type { Person } from '../types/Person';
 
-export const PersonLink = ({ person, name, people }) => {
+type Props = {
+  person?: Person;
+  name?: string;
+  people?: Person[];
+};
+
+export const PersonLink = ({ person, name, people }: Props) => {
   if (person) {
     return (
       <Link
